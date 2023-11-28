@@ -23,8 +23,9 @@ unsigned int hook_nat_in_hj(void* priv,
 
     // modify!!!
     // magic number 3232277504 = IPstr2IPint('192.168.164.0')
+    // magic number2 4294967040 = IPstr2IPint('255.255.255.0')
     // 如果源ip来自内网192.168.164.0, 不需要做hook_nat_in操作
-    if ((sip & (unsigned int)3232277504) == (unsigned int)3232277504) {
+    if ((sip & (unsigned int)4294967040) == (unsigned int)3232277504) {
         return NF_ACCEPT;
     }
 
@@ -95,8 +96,9 @@ unsigned int hook_nat_out(void* priv,
 
     // modify!!!
     // magic number 3232277504 = IPstr2IPint('192.168.164.0')
+    // magic number2 4294967040 = IPstr2IPint('255.255.255.0')
     // 如果源ip不在内网192.168.164.0, 不需要做hook_nat_out操作
-    if ((sip & (unsigned int)3232277504) != (unsigned int)3232277504) {
+    if ((sip & (unsigned int)4294967040) != (unsigned int)3232277504) {
         return NF_ACCEPT;
     }
 
