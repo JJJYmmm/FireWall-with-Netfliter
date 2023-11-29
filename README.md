@@ -7,7 +7,7 @@
 
 ⭐️2023.11.29: NAT无法处理ICMP报文，所以会出现开了NAT ping不通的情况，原项目也存在这个问题，因为ICMP报文没有端口信息，涉及到伪端口的设计等等。感谢gls的反馈。
 
-⭐️2023.11.29: 修复了NAT内网判断的bug， 详见commit https://github.com/JJJYmmm/FireWall-with-Netfliter/commit/65bcab15fe8e69d9cbf95c6774abc9e9223cf721
+⭐️2023.11.28: 修复了NAT内网判断的bug， 详见https://github.com/JJJYmmm/FireWall-with-Netfliter/commit/65bcab15fe8e69d9cbf95c6774abc9e9223cf721
 
 ## 一些改动
 - 用python重写了前端，参数检查更方便（单纯套了一个壳子）
